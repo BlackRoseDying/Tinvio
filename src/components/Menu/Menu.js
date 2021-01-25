@@ -17,7 +17,13 @@ const Menu = props => {
 			     className={ classes.Logo }
 			     onClick={ () => window.scrollTo(0, 0) }/>
 			<Nav isVisible={ isVisible }/>
-			<div className={ burgerClasses.join('  ') } onClick={ () => setVisible(prevState => !prevState) }>
+			<div className={ burgerClasses.join('  ') } onClick={ () => {
+				setVisible(prevState => {
+					document.body.style.overflow = !prevState ? 'hidden' : 'auto';
+
+					return !prevState;
+				});
+			} }>
 				<span className={ classes.BurgerTop }/>
 				<span className={ classes.BurgerCenter }/>
 				<span className={ classes.BurgerBottom }/>

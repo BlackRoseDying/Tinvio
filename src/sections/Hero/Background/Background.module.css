@@ -1,0 +1,83 @@
+.Background {
+    display: flex;
+    margin-bottom: 46px;
+    margin-left: -15px;
+    width: calc(100% + 30px);
+    height: 520px;
+    z-index: -1;
+}
+
+.Boxes, .Fruits {
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.Boxes {
+    width: 62%;
+    background-position: 98%;
+}
+
+.Fruits {
+    margin-left: -30px;
+    width: 48%;
+    height: 500px;
+    transform: translateY(60px);
+}
+
+@media (min-width: 677px) {
+    .Boxes, .Fruits {
+        background-size: contain;
+    }
+}
+
+@media (min-width: 768px) {
+    .Background {
+        position: absolute;
+        justify-content: space-between;
+        margin-left: 0;
+        width: 100%;
+        top: 7rem;
+        left: 0;
+        overflow-x: hidden;
+    }
+
+    .Boxes, .Fruits {
+        width: 390px;
+        margin: 0;
+    }
+
+    .Boxes {
+        transform: translateX(-62%);
+    }
+
+    .Fruits {
+        transform: translateX(59%);
+    }
+}
+
+@media (min-width: 1024px) {
+    .Boxes {
+        transform: translateX(-56%);
+    }
+
+    .Fruits {
+        transform: translateX(55%);
+    }
+}
+
+@media (min-width: 1280px) {
+    .Background {
+        max-width: 1280px;
+        overflow: unset;
+        margin: 0 auto;
+        right: 0;
+    }
+
+    .Boxes {
+        transform: translateX(-30%)
+    }
+
+    .Fruits {
+        transform: translateX(34%);
+    }
+}

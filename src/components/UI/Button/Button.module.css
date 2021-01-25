@@ -1,7 +1,7 @@
 .Button {
-    padding: 1rem 0;
+    padding: 13px 0;
     width: 100%;
-    font-size: 1.2rem;
+    font-size: 1rem;
     text-align: center;
     color: #fff;
     border: 1px solid #ff474d;
@@ -22,7 +22,7 @@
     height: 2.2rem;
     font-size: .7rem;
     text-align: center;
-    color: #1e1e1e;
+    color: #21272e;
     border: 1px solid rgba(144, 149, 153, .35);;
     border-radius: 6px;
     background-color: transparent;

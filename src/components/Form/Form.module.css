@@ -1,0 +1,78 @@
+.Form {
+    box-sizing: border-box;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    padding: 1.8rem;
+    border-radius: 8px;
+    background-color: #fff;
+    transform: translate(-50%, -50%);
+    z-index: 600;
+}
+
+.Title {
+    margin-bottom: 3rem;
+    font-size: 1.2rem;
+    text-align: left;
+    font-weight: 500;
+}
+
+.Close {
+    position: absolute;
+    top: 1.6rem;
+    right: 1.6rem;
+    width: 2rem;
+    height: 2rem;
+    font-size: 0;
+    border-radius: 50%;
+    transition: 0.3s;
+    background-color: rgba(0, 0, 0, .2);
+    cursor: pointer;
+}
+
+.Close:hover {
+    background-color: rgba(0, 0, 0, .3);
+}
+
+.Close::before {
+    content: '';
+    position: absolute;
+    top: calc(50% - 1px);
+    left: calc(50% - .5rem);
+    display: block;
+    width: 1rem;
+    height: 3px;
+    background-color: #21272e;
+    transform: rotate(45deg);
+}
+
+.Close::after {
+    content: '';
+    position: absolute;
+    top: calc(50% - 1px);
+    left: calc(50% - .5rem);
+    display: block;
+    width: 1rem;
+    height: 3px;
+    background-color: #21272e;
+    transform: rotate(-45deg);
+}
+
+.InputElements {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.InputElements > button {
+    width: 50%;
+}
+
+.InputElements > p {
+    align-self: center;
+    padding-right: 1rem;
+    color: #909599;
+    font-size: .8rem;
+}
+

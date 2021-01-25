@@ -3,6 +3,13 @@
     top: 0;
     right: 0;
     left: 0;
-    padding: 0 15px;
-    height: 70px;
+    padding: 0 10px;
+    height: 79px;
+    z-index: 5;
+}
+
+@media (min-width: 768px) {
+    .Header {
+        padding: 0 var(--big-screen-padding);
+    }
 }

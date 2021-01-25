@@ -1,0 +1,14 @@
+.SliderSection {
+    position: relative;
+}
+
+.Wave {
+    position: absolute;
+    top: -756px;
+    width: 100%;
+    height: calc(100% + 756px);
+    background-size: 1010px 1520px;
+    background-position-x: 173px;
+    background-repeat: no-repeat;
+    z-index: -1;
+}

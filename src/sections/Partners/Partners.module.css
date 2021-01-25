@@ -1,0 +1,49 @@
+.Title {
+    margin: 0 auto 38px auto;
+    width: 85%;
+    font-size: 26px;
+    letter-spacing: 1px;
+}
+
+.PartnersList {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto 50px auto;
+    max-width: 1024px;
+    overflow: auto;
+}
+
+.PartnersList li {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    min-width: 116px;
+    min-height: 83px;
+    width: 120px;
+    height: 87px;
+}
+
+@media (min-width: 768px) {
+    .Title {
+        font-size: 32px;
+        letter-spacing: 0;
+    }
+
+    .PartnersList {
+        margin-bottom: 120px;
+    }
+
+    .PartnersList li {
+        padding: 12px;
+        width: 120px;
+        height: 96px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .PartnersList li {
+        padding: 0;
+        height: 120px;
+    }
+}

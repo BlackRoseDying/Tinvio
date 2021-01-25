@@ -1,0 +1,201 @@
+.Navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto 35px auto;
+    width: 186px;
+}
+
+.PrevButton, .NextButton {
+    position: relative;
+    padding: 0;
+    width: 50px;
+    height: 50px;
+    font-size: 0;
+    border: 1px solid #dae1e8;
+    border-radius: 50%;
+    background-color: #f0f1f2;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.PrevButton::before {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    top: calc(50% - 5px);
+    left: calc(50% - 5px);
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-left: 3px solid #000;
+    border-top: 3px solid #000;
+    transform: rotate(-45deg);
+}
+
+.NextButton::after {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    top: calc(50% - 5px);
+    left: calc(50% - 5px);
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-left: 3px solid #000;
+    border-top: 3px solid #000;
+    transform: rotate(135deg);
+}
+
+.PrevButton:hover, .NextButton:hover {
+    border: 1px solid #acacad;
+    background-color: #f3f3f3;
+}
+
+.PrevButton:disabled, .NextButton:disabled {
+    cursor: default;
+    border: 1px solid #dae1e8;
+    background-color: #fff;
+}
+
+.DotsList {
+    display: flex;
+    justify-content: space-between;
+    width: 24%;
+}
+
+.Dot {
+    border-radius: 50%;
+    width: 6px;
+    height: 6px;
+    background-color: rgba(33,39,46,.15);
+    transition: .3s;
+}
+
+.ActiveDot {
+    background-color: rgba(33,39,46,.8);
+}
+
+.ImagesListWrapper {
+    box-sizing: border-box;
+    margin-bottom: 40px;
+    padding: 30px 0 15px 0;
+    max-width: 1110px;
+    border-left: 40px solid #fcede8;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    background-color: #fcede8;
+    overflow-x: hidden;
+}
+
+.ImagesList {
+    display: flex;
+    width: 100%;
+    min-height: 310px;
+    max-height: 534px;
+    transition: .3s;
+}
+
+.ImagesList > li {
+    width: 100%;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.ImagesList > li > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: left;
+}
+
+.Title {
+    margin: 0 auto 14px auto;
+    width: 70%;
+    font-size: 28px;
+}
+
+.Content {
+    margin: 0 auto;
+    width: 80%;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+@media (min-width: 768px) {
+    .ImagesListWrapper {
+        margin: 0 0 45px auto;
+        width: 90%;
+        border-left: 0;
+    }
+
+    .ImagesList {
+        min-height: 538px;
+    }
+
+    .NavContentWrapper {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: flex-start;
+        margin: 0 0 40px auto;
+        padding: 0 40px 0 0;
+        width: 90%;
+    }
+
+    .Navigation {
+        margin-bottom: 0;
+        width: 400px;
+    }
+
+    .Title {
+        margin: 0 0 16px 0;
+        font-size: 34px;
+    }
+
+    .Content {
+        margin: 0;
+        font-size: 20px;
+    }
+
+    .Title, .Content {
+        text-align: left;
+    }
+
+    .ImagesList > li:last-child > img {
+        box-sizing: border-box;
+        padding: 20px 0 25px 60px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .Slider {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+
+    .ImagesListWrapper {
+        width: 100%;
+    }
+
+    .NavContentWrapper {
+        flex-direction: column-reverse;
+        padding-left: 76px;
+    }
+
+    .Navigation {
+        margin: 0;
+        width: 180px;
+    }
+
+    .Content {
+        margin-bottom: 40px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .ImagesListWrapper {
+        min-width: 740px;
+    }
+}

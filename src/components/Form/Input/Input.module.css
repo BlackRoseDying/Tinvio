@@ -1,0 +1,61 @@
+.InputWrapper {
+    position: relative;
+    width: 100%;
+}
+
+.CodeWrapper, .PhoneWrapper {
+    display: inline-block;
+}
+
+.CodeWrapper {
+    width: 28%;
+}
+
+.PhoneWrapper {
+    width: 68%;
+}
+
+.Input {
+    box-sizing: border-box;
+    margin-bottom: 2rem;
+    padding: .9rem .8rem;
+    width: 100%;
+    font-size: 1rem;
+    border: 1px solid #c7c7c7;
+    border-radius: 8px;
+}
+
+.Input:focus {
+    outline: none;
+    border-color: #3897ff;
+}
+
+.Input:focus::placeholder {
+    color: transparent;
+}
+
+.Label {
+    position: absolute;
+    top: -.5rem;
+    left: 1rem;
+    padding: 0 .2rem;
+    font-size: 1rem;
+    color: #3897ff;
+    line-height: 1rem;
+    background-color: #fff;
+    opacity: 0;
+    z-index: 1;
+    transition: opacity .3s;
+}
+
+.Input:focus + .Label {
+    opacity: 1;
+}
+
+.Img {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 16px;
+    height: 16px;
+}
